@@ -40,7 +40,7 @@ func (pd *ProductDB) GetProduct(id string) (*entity.Product, error) {
 	return &product, nil
 }
 
-func (pd *ProductDB) GetProductByCategory(categoryID string) ([]*entity.Product, error) {
+func (pd *ProductDB) GetProductsByCategory(categoryID string) ([]*entity.Product, error) {
 	rows, err := pd.db.Query("SELECT id, name, description, price, category_id, image_url FROM products WHERE category_id = ?", categoryID)
 	if err != nil {
 		return nil, err
