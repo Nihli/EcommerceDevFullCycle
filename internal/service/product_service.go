@@ -38,7 +38,7 @@ func (ps *ProductService) GetProduct(ProductID string) (*entity.Product, error) 
 	return product, nil
 }
 
-func (ps *ProductService) GetProductsByCategory(categoryID string) ([]*entity.Product, err) {
+func (ps *ProductService) GetProductsByCategory(categoryID string) ([]*entity.Product, error) {
 	products, err := ps.ProductDB.GetProductsByCategory(categoryID)
 	if err != nil {
 		return nil, err
