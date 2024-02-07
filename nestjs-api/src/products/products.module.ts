@@ -6,6 +6,7 @@ import { Product } from './entities/product.entity';
 
 @Module({
   //for root é module raiz, for feature é module filho
+  //seta quais entidades estamos usando
   imports: [TypeOrmModule.forFeature([Product])],
   controllers: [ProductsController],
   providers: [ProductsService],

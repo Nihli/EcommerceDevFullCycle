@@ -1,1 +1,12 @@
-GET http://localhost:3000/products/1
+GET http://localhost:3000/products
+
+###
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "name": "Product 1",
+    "description": "Product 1 description",
+    "image_url": "https://static.wikia.nocookie.net/onepiece/images/c/ca/Izo_Anime_Post_Timeskip_Infobox.png/revision/latest?cb=20210630180101&path-prefix=pt",
+    "price": 49.99
+}
